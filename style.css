@@ -1,0 +1,85 @@
+body, html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	width: 100%;
+}
+
+#leftside {
+	background-color:hsl(223, 9%, 15%);
+	height: 100%;
+	max-height: 100%;
+	flex-basis: 300px;
+	min-width: 300px;
+}
+
+#selected-ingredients {
+	min-height:15%;
+}
+
+#selected-ingredients div {
+	display: block;
+	width: 60%;
+	padding: 5px;
+	background-color: hsl(254, 65%, 79%);
+	border-radius: 5px;
+	margin:auto;
+	margin: 10px auto;
+}
+
+#selected-ingredients button {
+	float:right;
+}
+
+#searchbar {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#searchbar label {
+	display: block;
+	font-size: 2em;
+	color: white;
+}
+
+#searchbar input {
+	display: block;
+	font-size: 2em;
+	margin: auto;
+	width: 90%;
+}
+
+#mainside {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 3;
+	background-color: hsl(260, 9%, 87%);
+	overflow: auto;
+	height: 100%;
+}
+
+#results {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+
+#results div {
+	flex-basis: 150px;
+	width: 100px;
+	height: 200px;
+	margin: 10px;
+	border: 1px solid black;
+}
+
+#results div span {
+	display: inline-block;
+	margin: 5px;
+}
+
+span.is-in {
+	font-weight: bold;
+}

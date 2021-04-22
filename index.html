@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css">
+		<script src="cocktails_iba_final.js"></script>
+		<script src="tags.js"></script>
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<div id="leftside">
+			<div id="searchbar">
+				<label for="cocktail-add-ingredient">Search :</label>
+				<input list="cocktail-ingredients" id="cocktail-add-ingredient" name="cocktail-add-ingredient" oninput="addIngredient()"/>
+			</div>
+			<div id="selected-ingredients"></div>
+		</div>
+		<div id="mainside">
+			<div id="focused-result"></div>
+			<div id="results"></div>
+		</div>
+
+		<datalist id="cocktail-ingredients">
+			<option value="absinthe"></option>
+			<option value="agave nectar"></option>
+			<option value="amaretto liqueur"></option>
+			<option value="amaro nonino"></option>
+			<option value="angostura bitter"></option>
+			<option value="aperol"></option>
+			<option value="aromatic bitters"></option>
+			<option value="black pepper"></option>
+			<option value="bourbon"></option>
+			<option value="brandy"></option>
+			<option value="brown sugar"></option>
+			<option value="bénédictine"></option>
+			<option value="cachaça"></option>
+			<option value="calvados"></option>
+			<option value="campari"></option>
+			<option value="carbonated water"></option>
+			<option value="celery salt"></option>
+			<option value="chamomile cordial"></option>
+			<option value="champagne"></option>
+			<option value="cherry liqueur"></option>
+			<option value="coconut cream"></option>
+			<option value="coffee"></option>
+			<option value="coffee liqueur"></option>
+			<option value="cognac"></option>
+			<option value="cointreau"></option>
+			<option value="cola"></option>
+			<option value="cranberry juice"></option>
+			<option value="cream"></option>
+			<option value="creme de mure"></option>
+			<option value="crème de cacao"></option>
+			<option value="crème de cassis"></option>
+			<option value="crème de menthe"></option>
+			<option value="crème de violette"></option>
+			<option value="curaçao"></option>
+			<option value="donn’s mix"></option>
+			<option value="drambuie"></option>
+			<option value="dry vermouth"></option>
+			<option value="egg white"></option>
+			<option value="egg yolk"></option>
+			<option value="espresso"></option>
+			<option value="falernum"></option>
+			<option value="fernet branca"></option>
+			<option value="fernet-branca"></option>
+			<option value="galliano"></option>
+			<option value="gin"></option>
+			<option value="ginger"></option>
+			<option value="ginger ale"></option>
+			<option value="ginger beer"></option>
+			<option value="grapefruit juice"></option>
+			<option value="grapefruit soda"></option>
+			<option value="green chartreuse"></option>
+			<option value="grenadine"></option>
+			<option value="honey mix"></option>
+			<option value="honey syrup"></option>
+			<option value="kahlúa"></option>
+			<option value="lemon juice"></option>
+			<option value="lillet blanc"></option>
+			<option value="lime"></option>
+			<option value="lime juice"></option>
+			<option value="maraschino"></option>
+			<option value="mezcal"></option>
+			<option value="mint"></option>
+			<option value="orange bitters"></option>
+			<option value="orange juice"></option>
+			<option value="orgeat syrup"></option>
+			<option value="peach purée"></option>
+			<option value="peach schnapps"></option>
+			<option value="pernod"></option>
+			<option value="peychaud's bitters"></option>
+			<option value="pineapple juice"></option>
+			<option value="pisco"></option>
+			<option value="port"></option>
+			<option value="prosecco"></option>
+			<option value="raspberry liqueur"></option>
+			<option value="raspberry syrup"></option>
+			<option value="raw honey"></option>
+			<option value="red vermouth"></option>
+			<option value="red wine"></option>
+			<option value="rum"></option>
+			<option value="salt"></option>
+			<option value="scotch whisky"></option>
+			<option value="simple syrup"></option>
+			<option value="soda water"></option>
+			<option value="sugar"></option>
+			<option value="sugar cane juice"></option>
+			<option value="sugar syrup"></option>
+			<option value="sweet vermouth"></option>
+			<option value="tabasco sauce"></option>
+			<option value="tequila"></option>
+			<option value="tomato juice"></option>
+			<option value="triple sec"></option>
+			<option value="vodka"></option>
+			<option value="water"></option>
+			<option value="whiskey"></option>
+			<option value="white smooth grappa"></option>
+			<option value="white wine"></option>
+			<option value="worcestershire sauce"></option>
+			<option value="yellow chartreuse"></option>			
+		</datalist>
+	</body>
+</html>
