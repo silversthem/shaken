@@ -1,0 +1,92 @@
+/* leftside container */
+
+#leftside {
+	background-color:hsl(223, 9%, 15%);
+	height: 100%;
+	max-height: 100%;
+	flex-basis: 300px;
+	min-width: 300px;
+}
+
+/* title header */
+
+#title {
+	color: white;
+	text-align: center;
+}
+
+/* searchbar */
+
+#searchbar {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#searchbar label {
+	display: block;
+	font-size: 2em;
+	color: white;
+}
+
+#searchbar input {
+	display: block;
+	font-size: 2em;
+	margin: auto;
+	width: 90%;
+}
+
+/* autocomplete */
+
+#autocomplete-list {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: hsl(240, 1%, 45%);
+	padding:1px;
+	border-radius: 0px 0px 5px 5px;
+	max-height: 400px;
+	overflow: auto;
+}
+
+.autocompleted {
+    width: 95%;
+    margin: 1px auto;
+    padding: 5px;
+    font-size: 1.5em;
+    background: hsl(184, 40%, 92%);
+    cursor: pointer;
+}
+
+.autocompleted:hover {
+	background-color: hsl(212, 72%, 72%);
+}
+
+.active-autocomplete {
+	background-color: hsl(212, 70%, 59%) !important;
+}
+
+/* tags container & tag div */
+
+#selected-ingredients {
+	min-height: 15%;
+	padding: 15px;
+}
+
+#selected-ingredients div {
+	display: inline-block;
+	padding: 5px;
+	background-color: hsl(254, 65%, 79%);
+	border-radius: 5px;
+	margin: 10px;
+}
+
+#selected-ingredients span {
+	display: inline-block;
+	margin: 5px;
+}
+
+#selected-ingredients button {
+	float: right;
+	margin: 5px;
+    cursor: pointer;
+}

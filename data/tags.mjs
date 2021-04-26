@@ -1,4 +1,4 @@
-var tags = ["absinthe",
+export const tags = ["absinthe",
 "agave nectar",
 "amaretto liqueur",
 "amaro nonino",

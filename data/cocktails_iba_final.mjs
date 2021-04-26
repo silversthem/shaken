@@ -1,4 +1,4 @@
-var cocktails = {
+export const cocktails = {
     "Alexander": [
         {
             "type": "cl",

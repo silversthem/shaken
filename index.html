@@ -2,19 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="style.css">
-		<script src="data/cocktails_iba_final.js"></script>
-		<script src="data/tags.js"></script>
-		<script src="js/html.js"></script>
-		<script src="js/main.js" defer></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/searchbar.css">
+		<link rel="stylesheet" href="css/mainside.css">
+		<script type="module" src="js/main.mjs"></script>
 	</head>
 	<body>
 		<div id="leftside">
-			<div id="searchbar">
-				<label for="cocktail-add-ingredient">Search :</label>
-				<input id="cocktail-add-ingredient" name="cocktail-add-ingredient" oninput="autocompleteIngredients()" placeholder="Search ingredients"/>
+			<div id="title">
+				<h1>Drink Finder</h1>
 			</div>
-			<div id="autocomplete-list"></div>
+			<div id="searchbar">
+				<input id="cocktail-add-ingredient" name="cocktail-add-ingredient" placeholder="Search ingredients"/>
+				<div id="autocomplete-list"></div>
+			</div>
 			<div id="selected-ingredients"></div>
 		</div>
 		<div id="mainside">
