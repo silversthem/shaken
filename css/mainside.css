@@ -5,8 +5,8 @@
 	flex-direction: column;
 	flex-grow: 3;
 	background-color: hsl(260, 9%, 87%);
-	overflow: auto;
 	height: 100%;
+	overflow: hidden;
 }
 
 /* Results */
@@ -14,6 +14,8 @@
 	display: flex;
 	flex-flow: row wrap;
 	width: 100%;
+	overflow: auto;
+	z-index: 5;
 }
 
 #results div span {
@@ -24,6 +26,7 @@
 .result span {
 	padding: 2px;
 	border: 1px solid transparent;
+	cursor: pointer;
 }
 
 span.is-in {
@@ -47,7 +50,6 @@ span.is-not-in {
 	padding: 5px;
 	border-radius: 3px;
 	border: 1px solid black;
-	cursor: pointer;
 	background-color:hsl(0, 0%, 90%);
 }
 
@@ -61,6 +63,7 @@ span.is-not-in {
 
 .result h3 {
 	font-size: 1.2em;
+	cursor: pointer;
 }
 
 .result h3:hover {
@@ -69,4 +72,16 @@ span.is-not-in {
 
 .result div {
 	font-style: italic;
+}
+
+/* Focused result */
+
+#focused-result {
+	z-index: 10;
+	display: none;
+	overflow: hidden;
+	background: white;
+	border-bottom: 1px solid transparent;
+	box-shadow: 0 1px 5px grey;
+	padding-left: 200px;
 }

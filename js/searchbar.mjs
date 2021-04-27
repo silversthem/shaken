@@ -39,6 +39,10 @@ export function autocompleteIngredients() {
 	setFocusAutocompletedDiv(0)
 }
 
+// closes autocomplete div
+/* we do this on a delay because the autocomplete div is supposed to disappear when the search input loses focus
+but that happens when we click on an autocompletion suggestion, so it needs a little time for the click event to
+happen before the div closes */
 export function closeAutocomplete() {
 	setTimeout(() => {
 		autocompleted_list.innerHTML = ''
@@ -174,7 +178,10 @@ export function searchCocktails() {
 	let resultsDiv = document.getElementById('results')
 	resultsDiv.innerHTML = ''
 	let perfectScore = taggedIngredients.length
+	// creates a callback to call when a tag gets clicked
+	const tagClickEvent = (tag) => {return () => {addSearchTag(tag)}}
 	for(const result of results) {
-		resultsDiv.appendChild(HTML.createResultDiv(result.name, result.matches, perfectScore == result.score))
+
+		resultsDiv.appendChild(HTML.createResultDiv(result.name, result.matches, tagClickEvent, perfectScore == result.score))
 	}
 }
