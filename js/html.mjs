@@ -79,7 +79,7 @@ export function createResultDiv(cocktailName, matches, tagClickEvent, isPerfectS
 // Transitions between different heights for the focused element div
 function startFocusDivRollup(previousHeight, nextHeight) {
 	const resultFocus = document.getElementById('focused-result')
-	const PAS = 10
+	const PAS = 7
 	// somehow changing the height doesnt work but this does
 	// im not sure why, maybe look into it
 	const changeHeight = (newHeight) => {
@@ -101,7 +101,7 @@ function startFocusDivRollup(previousHeight, nextHeight) {
 		}
 		counter += iterator
 		changeHeight(counter)
-	}, 25)
+	}, 33)
 }
 
 // Creates the dom for a focused result in the main content

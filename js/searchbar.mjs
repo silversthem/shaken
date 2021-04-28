@@ -129,7 +129,6 @@ export function addSearchTag(tag) {
 	selected_ingredients_list.appendChild(HTML.createSearchTagDiv(tag, deleteAction))
 	// updating the search
 	searchCocktails()
-
 }
 
 // Deletes a tag from the search & updates search
@@ -169,7 +168,7 @@ export function searchCocktails() {
 		}
 		// Adding all positive score to the results
 		if(score > 0) {
-			results.push({"name": name, "score":score, "matches":matchedIngredients})
+			results.push({"name": name, "score": score, "matches": matchedIngredients})
 		}
 	}
 	// sorting results by score, descending order
@@ -181,7 +180,6 @@ export function searchCocktails() {
 	// creates a callback to call when a tag gets clicked
 	const tagClickEvent = (tag) => {return () => {addSearchTag(tag)}}
 	for(const result of results) {
-
 		resultsDiv.appendChild(HTML.createResultDiv(result.name, result.matches, tagClickEvent, perfectScore == result.score))
 	}
 }

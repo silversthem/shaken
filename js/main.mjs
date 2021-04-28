@@ -4,6 +4,7 @@
 
 // loads searchbar events & functionalities
 import * as SEARCH from '/js/searchbar.mjs'
+import {Router} from '/js/router.mjs'
 
 // just to test stuff
 SEARCH.addSearchTag('gin')
