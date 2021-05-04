@@ -18,6 +18,7 @@ export class ResultsDisplay {
 	createResultDiv(name, matches, isPerfectScore) {
 		let div = document.createElement('div')
 		div.classList.add('result')
+		div.dataset.resultCocktailName = name
 		if (isPerfectScore) {
 			div.classList.add('perfect-match')
 		} else {
@@ -72,6 +73,10 @@ export class ResultsDisplay {
 			}
 		}
 		return false
+	}
+	// Hides results
+	hide() {
+		this.resultsDiv.innerHTML = ''
 	}
 	// updates search
 	updateSearch(selectedTags) {

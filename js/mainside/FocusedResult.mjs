@@ -20,20 +20,57 @@ export class FocusedResult {
 		this.openInterval = false
 		this.closeInterval = false
 	}
+	// returns a domstring parsing the ingredient
+	parseIngredient(ingredient) {
+		let ingStr = ''
+		switch(ingredient.type) {
+			case 'cl':
+				ingStr += ingredient.quantity + 'cl of '
+			break;
+			case 'spoon':
+				ingStr += ingredient.quantity
+				ingStr += ' ' + ingredient.spoon
+				ingStr += (ingredient.quantity == 1) ? '' : 's'
+				ingStr += ' of '
+			break;
+			case 'dash':
+				ingStr += ingredient.quantity + ' '
+				ingStr += (ingredient.quantity == 1) ? 'dash of ' : 'dashes of '
+			break;
+			case 'drop':
+				ingStr += ingredient.quantity + ' '
+				ingStr += (ingredient.quantity == 1) ? 'drop of ' : 'drops of '
+			break;
+			case 'part':
+				ingStr += ingredient.quantity + ' '
+				ingStr += (ingredient.quantity == 1) ? 'part ' : 'parts '
+			break;
+			case 'nonnumeric':
+
+			break;
+		}
+		ingStr += ingredient.ingredient
+		return ingStr
+	}
 	// Create a focused div
 	createFocusedDiv() {
 		let cocktail = this.cocktails[this.cocktailName]
 		let div = document.createElement('div')
 		let titleDiv = document.createElement('h1')
+		let unfocus = document.createElement('p')
+		unfocus.innerText = '*'
+		unfocus.classList.add('unfocus-button')
+		unfocus.addEventListener('click', () => this.unfocusEvent())
 		titleDiv.innerText = this.cocktailName
 		let ingList = document.createElement('ul')
 		for (const ingredient of cocktail) {
 			let ingLi = document.createElement('li')
-			ingLi.innerText = ingredient.ingredient
+			ingLi.innerText = this.parseIngredient(ingredient)
 			ingList.appendChild(ingLi)
 		}
 		div.appendChild(titleDiv)
 		div.appendChild(ingList)
+		div.appendChild(unfocus)
 		return div
 	}
 	// displays the result with the animation
@@ -117,7 +154,8 @@ export class FocusedResult {
 		const nextHeight = fakeDiv.offsetHeight
 		document.body.removeChild(fakeDiv)
 		// showing the result div and starting the transition between the heights
-		this.focusedResultDiv.innerHTML = fakeDiv.innerHTML
+		this.focusedResultDiv.innerHTML = ''
+		this.focusedResultDiv.appendChild(div)
 		this.startFocusDivRollup(currentHeight, nextHeight)
 	}
 }

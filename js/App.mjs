@@ -9,12 +9,14 @@ import {SearchBar} from '/js/searchbar/SearchBar.mjs'
 import {TagList} from '/js/searchbar/TagList.mjs'
 import {ResultsDisplay} from '/js/mainside/ResultsDisplay.mjs'
 import {FocusedResult} from '/js/mainside/FocusedResult.mjs'
+import {Catalog} from '/js/mainside/Catalog.mjs'
 // importing data
 import {cocktails} from '/data/cocktails_iba_final.mjs'
 import {tags} from '/data/tags.mjs'
 
 // html dom elements of the app
 // search bar
+const title_div = document.getElementById('title')
 const autocomplete_list = document.getElementById('autocomplete-list')
 const searchbar_input = document.getElementById('cocktail-add-ingredient')
 const selected_ingredients_list = document.getElementById('selected-ingredients')
@@ -22,12 +24,16 @@ const selected_ingredients_list = document.getElementById('selected-ingredients'
 const mainside = document.getElementById('mainside')
 const focused_result = document.getElementById('focused-result')
 const results_list = document.getElementById('results')
+const catalog_list = document.getElementById('catalog')
 
 export class App {
     // Creates the app instance, loading all necessary components
     constructor() {
         this.tagList = new Set()
         this.router = new Router()
+
+		// adding title onclick event
+		title_div.addEventListener('click', () => {Router.go('')})
 
         /* mounting components */
 
@@ -42,7 +48,8 @@ export class App {
         // focus result div
         this.focusedResultDiv = new FocusedResult(focused_result, cocktails, tags, () => {this.unfocusResult()}, addTagEvent)
         // catalog list
-        
+        this.catalog = new Catalog(catalog_list, cocktails, (name) => {this.focusResult(name)})
+
         /* appending routes */
 
         // Searching route gets the searched tags through the query parameter and shows results
@@ -55,14 +62,24 @@ export class App {
         // Viewing route shows the name parameter as a focused result
         // if there's a query parameter it will be used to build a search
         this.router.setRoute('view', (params) => {
-            // setting focused view of the cocktail
-            if(params.name !== undefined) this.focusedResultDiv.displayResult(params.name)
             // if there's a query parameter, we parse it and update the search else we show the catalog
             this.updateSearchFromQueryParameter(params.query);
+			// setting focused view of the cocktail
+            if(params.name !== undefined) {
+				this.focusedResultDiv.displayResult(params.name)
+				// setting the right search result as the active one
+				let r = document.querySelector('div[data-result-cocktail-name="' + params.name + '"]')
+				let cr = document.getElementById('active-result')
+				if(cr) cr.removeAttribute('id')
+				if(r) r.setAttribute('id', 'active-result')
+			}
         })
         // default landing route
         this.router.setRoute('', (params) => {
-            // displaying a catalog of all available cocktails, in alphabetical order
+			// hiding cocktail in view
+			this.focusedResultDiv.close()
+			// updating with an empty query -> displays catalog
+			this.updateSearchFromQueryParameter('')
         })
     }
     // Adds a tag to the taglist and updates the search
@@ -77,10 +94,7 @@ export class App {
     }
     // Updates the tag list in the url
     updateTagList() {
-        // Updating url without changing the route, if we're in viewing mode we stay that way
-        // but the search will update
-        // Router.go('search', {'query': Array.from(this.tagList).join(',')})
-        Router.update({'query': Array.from(this.tagList).join(',')})
+        Router.go('search', {'query': Array.from(this.tagList).join(',')})
     }
     // Updates search and tag list dom from the query string parameter from the url
     updateSearchFromQueryParameter(queryStr) {
@@ -91,15 +105,25 @@ export class App {
         // updating search
         this.updateSearch()
     }
+	// displaying search results, hiding catalog
+	displaySearchResults() {
+		this.catalog.hide()
+		this.resultsDiv.updateSearch(this.tagList)
+	}
+	// displaying catalog, hiding search results
+	displayCatalog() {
+		this.resultsDiv.hide()
+		this.catalog.displayCatalog()
+	}
     // updates the search
     updateSearch() {
         // if no tags showing catalog
-        if(this.tagList.length == 0) {
-            // @TODO add catalog
+        if(this.tagList.size == 0) {
+            this.displayCatalog()
             return
         }
         // updating results div with new results
-        this.resultsDiv.updateSearch(this.tagList)
+        this.displaySearchResults()
     }
     // focuses on a result
     focusResult(name) {
