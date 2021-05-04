@@ -6,4 +6,5 @@ body, html {
 	flex-direction: row;
 	align-items: stretch;
 	width: 100%;
+	font-family: 'Open Sans';
 }

@@ -123,14 +123,14 @@ span.is-not-in {
 #catalog {
 	overflow: auto;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	padding: 10px;
 	grid-gap: 10px;
 }
 
 .catalog-bucket {
 	background: #eee;
-	padding: 5px;
+	padding: 0px 15px 15px;
 	border-radius: 5px;
 	border: 1px solid grey;
 }
