@@ -1,13 +1,6 @@
 /* Container */
 
-#mainside {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 3;
-	background-color: hsl(260, 9%, 87%);
-	height: 100%;
-	overflow: hidden;
-}
+
 
 /* Results */
 #results {

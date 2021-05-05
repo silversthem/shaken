@@ -57,7 +57,7 @@ export class SearchBar {
 		let founds = {}
 		if(value.length > 0) {
 			for(const tagid in this.tags) {
-				if(this.tags[tagid].indexOf(value) == 0) {
+				if(this.tags[tagid].toLowerCase().indexOf(value.toLowerCase()) == 0) {
 					founds[tagid] = this.tags[tagid]
 				}
 			}

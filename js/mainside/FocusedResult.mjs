@@ -5,7 +5,7 @@
 */
 
 // The amount of pixel the transition moves by every 33msecs
-const PAS = 7
+const PAS = 10
 
 export class FocusedResult {
 	// creates the component
