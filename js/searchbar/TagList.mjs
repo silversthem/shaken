@@ -15,11 +15,10 @@ export class TagList {
 		// Creating the div, the span and the button
 		let div = document.createElement('div')
 		let tagText = document.createElement('span')
-		let deleteButton = document.createElement('button')
+		let deleteButton = document.createElement('span')
 		tagText.innerText = tag
 		// adding the click event to the button
 		deleteButton.setAttribute('class', 'delete-button')
-		deleteButton.innerText = 'x'
 		deleteButton.addEventListener('click', () => this.onDelete(tagid))
 		// updating the div with the tag data and the dom elements
 		div.dataset.value = tag

@@ -152,6 +152,7 @@ export class FocusedResult {
 		const fakeDiv = document.createElement('div')
 		fakeDiv.style.visibility = 'hidden'
 		fakeDiv.style.position = 'absolute'
+		fakeDiv.style.paddingBottom = '20px'
 		fakeDiv.appendChild(div)
 		document.body.appendChild(fakeDiv)
 		const nextHeight = fakeDiv.offsetHeight

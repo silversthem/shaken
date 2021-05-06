@@ -8,9 +8,10 @@
 	color: white;
 	text-align: center;
 	cursor: pointer;
-	font-size: 2rem;
+	font-size: 3rem;
 	padding: 15px;
 	padding-bottom: 30px;
+	font-family: 'Architects Daughter', cursive;
 }
 
 /* searchbar */
@@ -43,6 +44,7 @@
 
 #autocomplete-list {
 	position: absolute;
+	z-index: 1;
 	left: 50%;
 	transform: translate(-50%);
     width: 85%;
@@ -100,8 +102,10 @@
 	margin: 5px;
 }
 
-#selected-ingredients button {
+#selected-ingredients .delete-button {
 	float: right;
-	margin: 5px;
+	height: 16px;
+	width: 16px;
+	background-image: url('/css/assets/delete-tag-button.png');
     cursor: pointer;
 }
