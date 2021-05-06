@@ -1,14 +1,9 @@
-/* Container */
-
-
-
 /* Results */
 #results {
 	display: flex;
 	flex-flow: row wrap;
 	width: 100%;
 	overflow: auto;
-	z-index: 5;
 }
 
 #results div span {
@@ -37,26 +32,39 @@ span.is-not-in {
 
 .result {
 	text-align: center;
-	flex-basis: 200px;
-	/* height: 250px; */
 	margin: 10px;
 	padding: 5px;
 	border-radius: 3px;
-	border: 1px solid black;
-	background-color:hsl(0, 0%, 90%);
+	color: white;
+	background-color:rgb(29, 29, 29);
+	
+}
+
+@media (min-width: 800px) {
+	.result {
+		flex-basis: 200px;
+	}
+}
+
+@media (max-width: 800px) {
+	.result {
+		margin: 10px auto;
+		width: 90vw;
+	}
 }
 
 .perfect-match {
-	box-shadow: 0 0 5px black;
+	box-shadow: 0 0 5px grey;
 }
 
 .partial-match {
-	border-color: grey;
+	box-shadow: 0 0 5px black;
 }
 
 .result h3 {
-	font-size: 1.2em;
+	font-size: 1.4em;
 	cursor: pointer;
+	padding-bottom: 15px;
 }
 
 .result h3:hover {
@@ -68,13 +76,12 @@ span.is-not-in {
 }
 
 #active-result {
-	background-color: white;
+	background-color: rgb(122, 24, 109);
 }
 
 /* Focused result */
 
 #focused-result {
-	z-index: 10;
 	display: none;
 	overflow: hidden;
 	background: white;
@@ -82,33 +89,50 @@ span.is-not-in {
 	box-shadow: 0 1px 5px grey;
 	padding: 0;
 	margin: 0;
-	padding-bottom: 10px;
 }
 
-#focused-result div {
-	margin: 0;
-	height: 100%;
-	float: left;
-	width: 100%;
+.focused-result-div {
 	position: relative;
-	padding-bottom: 10px;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 25px;
 }
 
-#focused-result h1 {
+.focused-result-div h1 {
 	text-decoration: underline;
 	text-align: center;
+	font-size: 1.6em;
+	font-weight: 650;
 }
 
-.unfocus-button {
-	margin: 0;
+.focused-result-div h3 {
+	margin: 10px;
+	font-size: 1.3em;
+	font-weight: 550;
+}
+
+.focused-result-div ul {
+	padding-left: 20px;
+	list-style: disc;
+	margin-left: 2vw;
+}
+
+.focused-result-div .unfocus-button {
 	padding: 0;
+	margin: 0;
 	display: block;
 	font-weight: bold;
 	cursor: pointer;
 	text-align: center;
+	width: 32px;
+	height: 32px;
+	background-image: url('/css/assets/rollup-icon.png');
+	background-repeat: no-repeat;
 	position: absolute;
 	bottom: 0;
-	width: 100%;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 /* Catalog */
@@ -121,19 +145,29 @@ span.is-not-in {
 	grid-gap: 10px;
 }
 
+@media (max-width: 800px) {
+	#catalog {
+		grid-template-columns: 1fr;
+	}
+}
+
 .catalog-bucket {
-	background: #eee;
-	padding: 0px 15px 15px;
+	background: rgb(29, 29, 29);
+	color: white;
+	padding: 15px;
 	border-radius: 5px;
-	border: 1px solid grey;
 }
 
 .catalog-bucket h3 {
-	font-size:2em;
+	font-size:2.2em;
+	padding: 15px;
+	font-weight: 600;
 }
 
 .catalog-bucket .catalog-entry {
+	font-size: 1.2em;
 	cursor: pointer;
-	font-weight: 600;
+	font-weight: 550;
 	text-decoration: underline;
+	padding: 5px;
 }

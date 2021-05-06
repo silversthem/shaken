@@ -2,17 +2,19 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta charset="utf-8" />
 		<link
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
 			rel="stylesheet"/>
+		<link rel="stylesheet" href="css/reset.css"/>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/searchbar.css">
 		<link rel="stylesheet" href="css/mainside.css">
 		<script type="module" src="js/main.mjs"></script>
 	</head>
 	<body>
-		<div id="leftside">
+		<div id="header-bar">
 			<div id="title">
 				<h1>Dr1nkFinder</h1>
 			</div>
@@ -22,7 +24,7 @@
 			</div>
 			<div id="selected-ingredients"></div>
 		</div>
-		<div id="mainside">
+		<div id="content-div">
 			<div id="focused-result"></div>
 			<div id="results"></div>
 			<div id="catalog"></div>

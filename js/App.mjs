@@ -21,7 +21,6 @@ const autocomplete_list = document.getElementById('autocomplete-list')
 const searchbar_input = document.getElementById('cocktail-add-ingredient')
 const selected_ingredients_list = document.getElementById('selected-ingredients')
 // main side
-const mainside = document.getElementById('mainside')
 const focused_result = document.getElementById('focused-result')
 const results_list = document.getElementById('results')
 const catalog_list = document.getElementById('catalog')

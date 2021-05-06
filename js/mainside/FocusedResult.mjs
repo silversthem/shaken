@@ -57,8 +57,9 @@ export class FocusedResult {
 		let cocktail = this.cocktails[this.cocktailName]
 		let div = document.createElement('div')
 		let titleDiv = document.createElement('h1')
-		let unfocus = document.createElement('p')
-		unfocus.innerText = '*'
+		let ingredientsTitle = document.createElement('h3')
+		ingredientsTitle.innerText = 'Ingredients'
+		let unfocus = document.createElement('div')
 		unfocus.classList.add('unfocus-button')
 		unfocus.addEventListener('click', () => this.unfocusEvent())
 		titleDiv.innerText = this.cocktailName
@@ -69,6 +70,7 @@ export class FocusedResult {
 			ingList.appendChild(ingLi)
 		}
 		div.appendChild(titleDiv)
+		div.appendChild(ingredientsTitle)
 		div.appendChild(ingList)
 		div.appendChild(unfocus)
 		return div
@@ -143,6 +145,7 @@ export class FocusedResult {
 		this.focusedResultDiv.style.display = 'block'
 		// creating the result div to display
 		const div = this.createFocusedDiv()
+		div.classList.add('focused-result-div')
 		// creating a fake div, inserting it as a hidden absolute container
 		// in the body to get a default height for the result div container
 		// this is dumb but it works so...
