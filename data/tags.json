@@ -1,4 +1,4 @@
-export const tags = ["absinthe",
+["absinthe",
 "agave nectar",
 "amaretto liqueur",
 "amaro nonino",
@@ -95,4 +95,4 @@ export const tags = ["absinthe",
 "white smooth grappa",
 "white wine",
 "worcestershire sauce",
-"yellow chartreuse"];
+"yellow chartreuse"]

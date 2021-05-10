@@ -4,18 +4,15 @@
 	and uses tags and the cocktails list as data
 */
 
+import {Component} from '/js/app/Component.mjs'
+
 // The amount of pixel the transition moves by every 33msecs
 const PAS = 10
 
-export class FocusedResult {
-	// creates the component
-	constructor(focusedResultDiv, cocktails, tags, unfocusEvent, addTagEvent) {
+export class FocusedResult extends Component {
+	mount() {
+		// current focused cocktail name
 		this.cocktailName = null
-		this.focusedResultDiv = focusedResultDiv
-		this.cocktails = cocktails
-		this.tags = tags
-		this.unfocusEvent = unfocusEvent
-		this.addTagEvent = addTagEvent
 		// intervals for animation
 		this.openInterval = false
 		this.closeInterval = false
@@ -54,14 +51,14 @@ export class FocusedResult {
 	}
 	// Create a focused div
 	createFocusedDiv() {
-		let cocktail = this.cocktails[this.cocktailName]
+		let cocktail = this.dataController.cocktails[this.cocktailName]
 		let div = document.createElement('div')
 		let titleDiv = document.createElement('h1')
 		let ingredientsTitle = document.createElement('h3')
 		ingredientsTitle.innerText = 'Ingredients'
 		let unfocus = document.createElement('div')
 		unfocus.classList.add('unfocus-button')
-		unfocus.addEventListener('click', () => this.unfocusEvent())
+		unfocus.addEventListener('click', () => this.eventsCaller.unfocusResult())
 		titleDiv.innerText = this.cocktailName
 		let ingList = document.createElement('ul')
 		for (const ingredient of cocktail) {

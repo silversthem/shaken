@@ -3,20 +3,18 @@
 	it takes on event from the app, onFocusEvent and it takes the cocktails data
 */
 
-export class Catalog {
-	// creates the catalog
-	constructor(catalogDiv, cocktails, onFocusEvent) {
-		this.catalogDiv = catalogDiv
-		this.cocktails = cocktails
-		this.onFocusEvent = onFocusEvent
-		this.buckets = {}
+import {Component} from '/js/app/Component.mjs'
+
+export class Catalog extends Component {
+	mount() {
 		// creating buckets
+		this.buckets = {}
 		'abcdefghijklmnopqrstuvwxyz#'.split('').forEach(x => this.buckets[x] = []);
 		this.sortCocktails()
 	}
 	// Sorts cocktails by buckets using the first letter in their name (cocktails not starting with a letter will go in the # bucket)
 	sortCocktails() {
-		for(const cocktailName in this.cocktails) {
+		for(const cocktailName in this.dataController.cocktails) {
 			const firstLetter = cocktailName[0]
 			if(firstLetter.toLowerCase() in this.buckets) {
 				this.buckets[firstLetter.toLowerCase()].push(cocktailName)
@@ -43,7 +41,7 @@ export class Catalog {
 		entry.classList.add('catalog-entry')
 		entry.innerText = cocktailName
 		// binding clickEvent
-		entry.addEventListener('click', () => {this.onFocusEvent(cocktailName)})
+		entry.addEventListener('click', () => {this.eventsCaller.focusResult(cocktailName)})
 		return entry
 	}
 	// Hides catalog

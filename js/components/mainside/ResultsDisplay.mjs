@@ -4,14 +4,19 @@
 	and emits 2 app event, focusResult and addTag
 */
 
-export class ResultsDisplay {
+import {Component} from '/js/app/Component.mjs'
+
+export class ResultsDisplay extends Component {
 	// creates the component
-	constructor(resultsDiv, tags, cocktailsList, onFocusEvent, onTagClickEvent) {
-		this.tags = tags
-		this.cocktails = cocktailsList
-		this.resultsDiv = resultsDiv
-		this.onFocusEvent = onFocusEvent
-		this.onTagClickEvent = onTagClickEvent
+	// constructor(resultsDiv, tags, cocktailsList, onFocusEvent, onTagClickEvent) {
+	// 	this.tags = tags
+	// 	this.cocktails = cocktailsList
+	// 	this.resultsDiv = resultsDiv
+	// 	this.onFocusEvent = onFocusEvent
+	// 	this.onTagClickEvent = onTagClickEvent
+	// 	this.selectedTags = new Set()
+	// }
+	mount() {
 		this.selectedTags = new Set()
 	}
 	// creates a result div
@@ -28,14 +33,14 @@ export class ResultsDisplay {
 		let title = document.createElement('h3')
 		title.innerText = name
 		// Adding click event on title
-		title.addEventListener('click', () => this.onFocusEvent(name))
+		title.addEventListener('click', () => this.eventsCaller.focusResult(name))
 		// printing ingredients & result
 		let tagsDiv = document.createElement('div')
 		// printing all ingredients of the cocktails, bolding the ones matching the search
-		for (const ingredient of this.cocktails[name]) {
+		for (const ingredient of this.dataController.cocktails[name]) {
 			let tag = document.createElement('span')
 			tag.innerText = ingredient.ingredient
-			tag.dataset.value = this.tags.indexOf(ingredient.tag)
+			tag.dataset.value = this.dataController.tags.indexOf(ingredient.tag)
 			if (ingredient.tag in matches && matches[ingredient.tag]) {
 				tag.classList.add('is-in')
 			} else {
@@ -82,44 +87,11 @@ export class ResultsDisplay {
 	updateSearch(selectedTags) {
 		// only updating tags if they have changed
 		if(!this.haveTagsChanged(selectedTags)) return;
-		// listing all tag names to search
-		// we make a copy of the selected tags set because we want to compare them by content
-		// and have this set not mutate when the other one does, otherwise it's pointless
+		// saving new tags to avoid researching the same tags
 		this.selectedTags = new Set(selectedTags)
-		let tags = [] // this is a map of the tags where the name is the key, it's used to translate back to it later
-		for(const tagid of this.selectedTags) {
-			tags.push(this.tags[tagid])
-		}
-		// searching cocktails list
-		let results = []
-		for (const name in this.cocktails) {
-			let cocktail = this.cocktails[name]
-			// we make an object of all the ingredients to find, 0 if not found 1 if found
-			let matchedIngredients = {}
-			for (const ingredient of tags) {
-				matchedIngredients[ingredient] = 0
-			}
-			// we search the ingredients
-			for (const ingredient of cocktail) {
-				if (ingredient["tag"] in matchedIngredients) {
-					matchedIngredients[ingredient["tag"]] = 1
-				}
-			}
-			// we check the state of the search object
-			let score = 0
-			for (const ingredient in matchedIngredients) {
-				score += matchedIngredients[ingredient]
-			}
-			// Adding all positive score to the results
-			if (score > 0) {
-				results.push({ "name": name, "score": score, "matches": matchedIngredients })
-			}
-		}
-		// sorting results by score, descending order
-		results.sort((a, b) => b.score - a.score)
-		// printing results
+		let results = this.dataController.searchCocktailsByTags(this.selectedTags)
 		this.resultsDiv.innerHTML = ''
-		let perfectScore = tags.length
+		let perfectScore = selectedTags.size
 		for (const result of results) {
 			this.resultsDiv.appendChild(this.createResultDiv(result.name, result.matches, perfectScore == result.score))
 		}

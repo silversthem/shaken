@@ -3,15 +3,11 @@
 	It takes 1 app event, addTag
 */
 
-export class SearchBar {
-	// Creating the component and mounting it
-	constructor(input, autocompleteDiv, tags, onAutocomplete) {
-		// getting attributes
-		this.input = input
-		this.autocompleteDiv = autocompleteDiv
-		this.tags = tags
-		this.onAutocomplete = onAutocomplete
-		// binding events
+import { Component } from '/js/app/Component.mjs'
+
+export class SearchBar extends Component {
+	mount() {
+		// binding input field events
 		this.input.addEventListener('focus', () => this.autocompleteIngredients())
 		this.input.addEventListener('input', () => this.autocompleteIngredients())
 		this.input.addEventListener('focusout', () => this.closeAutocomplete())
@@ -37,11 +33,16 @@ export class SearchBar {
 
 	/* autocomplete divs creation function */
 
+	// creates the dom for an element inside the autocomplete div
 	createAutocompletedDiv(tagid, tag) {
 		let div = document.createElement('div')
 		div.classList.add('autocompleted')
 		div.innerText = tag
-		const tagClicked = () => {this.onAutocomplete(tagid); this.input.value = ''; this.autocompleteDiv.innerHTML = '';}
+		const tagClicked = () => {
+			this.eventsCaller.addTag(tagid);
+			this.input.value = '';
+			this.autocompleteDiv.innerHTML = '';
+		}
 		div.addEventListener('click', tagClicked)
 		div.dataset.value = tagid
 		return div
@@ -53,26 +54,20 @@ export class SearchBar {
 		// clearing autocomplete list
 		this.autocompleteDiv.innerHTML = ''
 		// searching tags matching current input
-		let value = this.input.value
-		let founds = {}
-		if(value.length > 0) {
-			for(const tagid in this.tags) {
-				if(this.tags[tagid].toLowerCase().indexOf(value.toLowerCase()) == 0) {
-					founds[tagid] = this.tags[tagid]
-				}
-			}
-		} else { // empty value, display everything
-			founds = this.tags
-		}
+		let founds = this.dataController.autocompleteSuggestions(this.input.value)
 		// printing autocomplete
-		for(const foundid in founds) {
+		for (const foundid in founds) {
 			this.autocompleteDiv.appendChild(this.createAutocompletedDiv(foundid, founds[foundid]))
 		}
 		// adjusting autocomplete data
-		this.autocompleteDiv.total = founds.length
+		this.autocompleteDiv.total = Object.keys(founds).length
 		this.autocompleteDiv.current = 0
 		this.setFocusAutocompletedDiv(0)
 	}
+
+	// closes autocomplete div when input field out of focus
+	// on a timeout because if we click on an element in the div, the input field loses focus
+	// and if we close it right away, the click event isn't dispatched
 	closeAutocomplete() {
 		setTimeout(() => {
 			this.autocompleteDiv.innerHTML = ''

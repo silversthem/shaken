@@ -3,12 +3,17 @@
 	It takes 1 app event, deleteTag and selected tag data from the app
 */
 
-export class TagList {
+import {Component} from '/js/app/Component.mjs'
+
+export class TagList extends Component {
 	// creates the tag list
-	constructor(tagsDiv, tagList, onDeleteTag) {
-		this.tagsDiv = tagsDiv
-		this.tags = tagList
-		this.onDelete = onDeleteTag
+	// constructor(tagsDiv, tagList, onDeleteTag) {
+	// 	this.tagsDiv = tagsDiv
+	// 	this.tags = tagList
+	// 	this.onDelete = onDeleteTag
+	// }
+	mount() {
+
 	}
 	// creates a tag div with a delete button inside the tag list
 	createTagDiv(tagid, tag) {
@@ -19,7 +24,7 @@ export class TagList {
 		tagText.innerText = tag
 		// adding the click event to the button
 		deleteButton.setAttribute('class', 'delete-button')
-		deleteButton.addEventListener('click', () => this.onDelete(tagid))
+		deleteButton.addEventListener('click', () => this.eventsCaller.deleteTag(tagid))
 		// updating the div with the tag data and the dom elements
 		div.dataset.value = tag
 		div.appendChild(tagText)
@@ -31,8 +36,8 @@ export class TagList {
 		this.tagsDiv.innerHTML = '' // emptying tag list
 		// appending tags one by one
 		for(const tagid of selectedTags) {
-			if(tagid in this.tags) {
-				this.tagsDiv.appendChild(this.createTagDiv(tagid, this.tags[tagid]))
+			if(tagid in this.dataController.tags) {
+				this.tagsDiv.appendChild(this.createTagDiv(tagid, this.dataController.tags[tagid]))
 			} else {
 				console.error('No tag with id ' + tagid)
 			}
