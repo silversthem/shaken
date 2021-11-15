@@ -3,15 +3,15 @@
 */
 
 // importing router
-import {Router} from '/js/app/Router.mjs'
+import {Router} from './app/Router.mjs'
 // importing components
-import {SearchBar} from '/js/components/searchbar/SearchBar.mjs'
-import {TagList} from '/js/components/searchbar/TagList.mjs'
-import {ResultsDisplay} from '/js/components/mainside/ResultsDisplay.mjs'
-import {FocusedResult} from '/js/components/mainside/FocusedResult.mjs'
-import {Catalog} from '/js/components/mainside/Catalog.mjs'
+import {SearchBar} from './components/searchbar/SearchBar.mjs'
+import {TagList} from './components/searchbar/TagList.mjs'
+import {ResultsDisplay} from './components/mainside/ResultsDisplay.mjs'
+import {FocusedResult} from './components/mainside/FocusedResult.mjs'
+import {Catalog} from './components/mainside/Catalog.mjs'
 // importing data controller
-import {AppDataController} from '/js/AppDataController.mjs'
+import {AppDataController} from './AppDataController.mjs'
 
 // html dom elements of the app
 // search bar

@@ -3,7 +3,7 @@
 	it takes on event from the app, onFocusEvent and it takes the cocktails data
 */
 
-import {Component} from '/js/app/Component.mjs'
+import {Component} from './../../app/Component.mjs'
 
 export class Catalog extends Component {
 	mount() {

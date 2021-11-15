@@ -3,7 +3,7 @@
 	It takes 1 app event, deleteTag and selected tag data from the app
 */
 
-import {Component} from '/js/app/Component.mjs'
+import {Component} from './../../app/Component.mjs'
 
 export class TagList extends Component {
 	// creates the tag list

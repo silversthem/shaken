@@ -3,7 +3,7 @@
 	Basically an extension of the DataController class tailored for the app
 */
 
-import {DataController} from '/js/app/DataController.mjs'
+import {DataController} from './app/DataController.mjs'
 
 export class AppDataController extends DataController {
 	// loads all app data on class construction

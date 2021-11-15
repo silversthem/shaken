@@ -3,7 +3,7 @@
 	It takes 1 app event, addTag
 */
 
-import { Component } from '/js/app/Component.mjs'
+import { Component } from './../../app/Component.mjs'
 
 export class SearchBar extends Component {
 	mount() {

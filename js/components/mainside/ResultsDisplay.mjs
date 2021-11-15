@@ -4,7 +4,7 @@
 	and emits 2 app event, focusResult and addTag
 */
 
-import {Component} from '/js/app/Component.mjs'
+import {Component} from './../../app/Component.mjs'
 
 export class ResultsDisplay extends Component {
 	mount() {

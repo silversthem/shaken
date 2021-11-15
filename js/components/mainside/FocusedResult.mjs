@@ -4,7 +4,7 @@
 	and uses tags and the cocktails list as data
 */
 
-import {Component} from '/js/app/Component.mjs'
+import {Component} from './../../app/Component.mjs'
 
 // The amount of pixel the transition moves by every 33msecs
 const PAS = 10

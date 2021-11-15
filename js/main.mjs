@@ -2,6 +2,6 @@
 	Builds the web app
 */
 
-import {App} from '/js/App.mjs'
+import {App} from './App.mjs'
 
 new App()
