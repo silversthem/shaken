@@ -51,7 +51,7 @@ export class FocusedResult extends Component {
 	}
 	// returns right glass icon
 	getGlassIcon(glassType) {
-		let src = '/css/assets/icons/'
+		let src = 'css/assets/icons/'
 		let types = {
 			'poco grande': src + 'poco_grande.svg',
 			'copper mug': src + 'mug.svg',

@@ -15,7 +15,7 @@ body {
 	max-width: 1000px;
 	margin: auto;
 	background: black;
-	background-image: url('/css/assets/double-bubble-dark.png');
+	background-image: url('./assets/double-bubble-dark.png');
 	align-items: stretch;
 	box-shadow: 0px 0px 5px 5px black;
 }
