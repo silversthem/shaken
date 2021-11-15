@@ -106,6 +106,6 @@
 	float: right;
 	height: 16px;
 	width: 16px;
-	background-image: url('/css/assets/delete-tag-button.png');
+	background-image: url('./assets/delete-tag-button.png');
     cursor: pointer;
 }

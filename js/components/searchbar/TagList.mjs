@@ -6,12 +6,6 @@
 import {Component} from './../../app/Component.mjs'
 
 export class TagList extends Component {
-	// creates the tag list
-	// constructor(tagsDiv, tagList, onDeleteTag) {
-	// 	this.tagsDiv = tagsDiv
-	// 	this.tags = tagList
-	// 	this.onDelete = onDeleteTag
-	// }
 	mount() {
 
 	}

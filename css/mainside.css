@@ -143,7 +143,7 @@ span.is-not-in {
 	text-align: center;
 	width: 32px;
 	height: 32px;
-	background-image: url('/css/assets/rollup-icon.png');
+	background-image: url('./assets/rollup-icon.png');
 	background-repeat: no-repeat;
 	position: absolute;
 	bottom: 0px;
