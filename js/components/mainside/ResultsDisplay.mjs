@@ -7,15 +7,6 @@
 import {Component} from '/js/app/Component.mjs'
 
 export class ResultsDisplay extends Component {
-	// creates the component
-	// constructor(resultsDiv, tags, cocktailsList, onFocusEvent, onTagClickEvent) {
-	// 	this.tags = tags
-	// 	this.cocktails = cocktailsList
-	// 	this.resultsDiv = resultsDiv
-	// 	this.onFocusEvent = onFocusEvent
-	// 	this.onTagClickEvent = onTagClickEvent
-	// 	this.selectedTags = new Set()
-	// }
 	mount() {
 		this.selectedTags = new Set()
 	}
@@ -46,7 +37,7 @@ export class ResultsDisplay extends Component {
 			} else {
 				tag.classList.add('is-not-mentionned')
 				// adding action to add the tag on click
-				tag.addEventListener('click', () => this.onTagClickEvent(tag.dataset.value))
+				tag.addEventListener('click', () => this.eventsCaller.addTag(tag.dataset.value))
 			}
 			tagsDiv.appendChild(tag)
 		}

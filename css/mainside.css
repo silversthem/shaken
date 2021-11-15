@@ -95,8 +95,8 @@ span.is-not-in {
 .focused-result-div {
 	height: 100%;
 	width: 100%;
-	margin-bottom: 25px;
 	position: relative;
+	display: block;
 	z-index: 0;
 	font-family: 'Comfortaa', cursive;
 }
@@ -107,10 +107,24 @@ span.is-not-in {
 	font-family: 'Amatic SC', cursive;
 }
 
+.focused-result-div .glass-icon {
+	display: block;
+	width: 100px;
+	height: 115px;
+	object-fit: none;
+	margin: auto;
+	object-position: 50% 5px;
+}
+
 .focused-result-div h3 {
 	margin: 10px;
 	font-size: 1.5em;
 	font-weight: 550;
+}
+
+.focused-result-div div {
+	padding-left: 15px;
+	padding-right: 5px;
 }
 
 .focused-result-div ul {
@@ -132,8 +146,8 @@ span.is-not-in {
 	background-image: url('/css/assets/rollup-icon.png');
 	background-repeat: no-repeat;
 	position: absolute;
+	bottom: 0px;
 	z-index: 0;
-	bottom: 0;
 	left: 50%;
 	transform: translate(-50%);
 }

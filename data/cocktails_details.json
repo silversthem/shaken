@@ -1,0 +1,714 @@
+{
+    "Canchanchara": {
+        "glass": "old fashioned", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lime wedge", 
+        "type": "cocktail", 
+        "prep": "mix honey with water and lime juice and spread the mixture on the bottom and sides of the glass. add cracked ice, and then the rum. end by energetically stirring from bottom to top."
+    }, 
+    "Moscow mule": {
+        "glass": "copper mug", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lime slice", 
+        "type": "mixed drink", 
+        "prep": "combine vodka and ginger beer in a highball glass filled with ice. add lime juice. stir gently. garnish."
+    }, 
+    "Illegal": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "served in one of two ways:\nstraight up (no ice) in a chilled cocktail glass\non the rocks (over ice) in a traditional clay or terracotta mug", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into shaker with ice cubes. shake vigorously. strain into chilled cocktail glass, or \"on the rocks\" into a traditional clay or terracotta mug."
+    }, 
+    "Rusty Nail": {
+        "glass": "old fashioned", 
+        "timing": "after dinner", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lemon twist", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients directly into old-fashioned glass filled with ice. stir gently. garnish with a lemon twist. serve."
+    }, 
+    "Mary Pickford": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "shake and strain into a chilled large cocktail glass"
+    }, 
+    "Dry martini": {
+        "glass": "cocktail", 
+        "timing": "before dinner", 
+        "served": "up (or on the rocks)", 
+        "garnish": "olive or lemon twist", 
+        "type": "cocktail", 
+        "prep": "straight: pour all ingredients into mixing glass with ice cubes. stir well. strain into chilled martini cocktail glass. squeeze oil from lemon peel onto the drink, or garnish with olive."
+    }, 
+    "Paradise": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "shake together over ice.  strain into cocktail glass and serve chilled."
+    }, 
+    "Singapore Sling": {
+        "glass": "hurricane", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "maraschino cherry, pineapple", 
+        "type": "mixed drink", 
+        "prep": "pour all ingredients into cocktail shaker filled with ice cubes. shake well. strain into highball glass. garnish with pineapple and cocktail cherry."
+    }, 
+    "Daiquiri": {
+        "glass": "cocktail", 
+        "timing": "happy hour / summer drink", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "in a cocktail shaker add all ingredients. stir well to dissolve the sugar. add ice and shake. strain into chilled cocktail glass."
+    }, 
+    "Sex on the Beach": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "orange slice", 
+        "type": "cocktail", 
+        "prep": "build all ingredients in a highball glass filled with ice. garnish with orange slice."
+    }, 
+    "Ve.n.to": {
+        "glass": "tumbler", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lemon zest and white grapes", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into the shaker. shake vigorously with ice. strain into a chilled small tumbler glass filled with ice."
+    }, 
+    "Mai Tai": {
+        "glass": "old fashioned", 
+        "timing": null, 
+        "served": "shaved or crushed ice", 
+        "garnish": "spearmint leaves and lime shell", 
+        "type": "cocktail", 
+        "prep": "shake all ingredients with ice. pour unstrained into glass. garnish and serve with straw."
+    }, 
+    "Tequila Sunrise": {
+        "glass": "collins", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "orange slice and cherry", 
+        "type": "mixed drink", 
+        "prep": "pour the tequila and orange juice into glass over ice.  add the grenadine, which will sink to the bottom.  stir gently to create the sunrise effect.  garnish and serve."
+    }, 
+    "Aviation": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": "cherry", 
+        "type": "cocktail", 
+        "prep": "add all ingredients into cocktail shaker filled with ice. shake well and strain into cocktail glass. garnish with a cherry."
+    }, 
+    "Stinger": {
+        "glass": "cocktail", 
+        "timing": "after dinner (before dinner)", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour in a mixing glass with ice, stir and strain into a cocktail glass.  may also be served on rocks in a rocks glass."
+    }, 
+    "White Lady": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "add all ingredients into cocktail shaker filled with ice. shake well and strain into large cocktail glass."
+    }, 
+    "Clover Club": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "dry shake ingredients to emulsify, add ice, shake and served straight up."
+    }, 
+    "Long Island iced tea": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lemon slice", 
+        "type": "cocktail", 
+        "prep": "add all ingredients into highball glass filled with ice. stir gently. optionally garnish with lemon slice."
+    }, 
+    "Black Russian": {
+        "glass": "old fashioned", 
+        "timing": "after dinner", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour the ingredients into an old fashioned glass filled with ice cubes. stir gently."
+    }, 
+    "Hanky Panky": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "up", 
+        "garnish": "orange zest", 
+        "type": "mixed drink", 
+        "prep": "stirred over ice, strained into a chilled glass, garnished, and served up."
+    }, 
+    "Trinidad Sour": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into a cocktail shaker, shake well with ice, strain into chilled cocktail glass."
+    }, 
+    "Tuxedo": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": "cherry, lemon zest", 
+        "type": "cocktail", 
+        "prep": "stir all ingredients with ice and strain into a cocktail glass.  garnish with a cherry and a twist of lemon zest."
+    }, 
+    "Old fashioned": {
+        "glass": "old fashioned", 
+        "timing": "before dinner", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "orange slice or zest, and cocktail cherry", 
+        "type": "cocktail", 
+        "prep": "place sugar cube in old fashioned glass and saturate with bitters, add a few dashes of plain water. muddle until dissolved. fill the glass with ice cubes and add whiskey. garnish with orange slice or zest, and a cocktail cherry."
+    }, 
+    "Pisco Sour": {
+        "glass": "old fashioned", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": "angostura bitters (1 dash)", 
+        "type": "cocktail", 
+        "prep": "vigorously shake contents in a cocktail shaker with ice cubes, then strain into a glass and garnish with bitters."
+    }, 
+    "Sidecar": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into cocktail shaker filled with ice. shake well and strain into cocktail glass."
+    }, 
+    "Grasshopper": {
+        "glass": "cocktail", 
+        "timing": "after dinner", 
+        "served": "up", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour ingredients into a cocktail shaker with ice. shake briskly and then strain into a chilled cocktail glass."
+    }, 
+    "Sazerac": {
+        "glass": "old fashioned", 
+        "timing": "after dinner", 
+        "served": "straight up; without ice", 
+        "garnish": "lemon peel", 
+        "type": "cocktail", 
+        "prep": "rinse a chilled old-fashioned glass with the absinthe, add crushed ice, and set it aside. stir the remaining ingredients over ice and set it aside. discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. add the lemon peel for garnish."
+    }, 
+    "Paloma": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lime slice", 
+        "type": "cocktail", 
+        "prep": "pour tequila into highball glass. squeeze lime juice. add ice and salt, then top with soda and stir gently."
+    }, 
+    "Irish coffee": {
+        "glass": "irish coffee mug", 
+        "timing": null, 
+        "served": "hot", 
+        "garnish": null, 
+        "type": "mixed drink", 
+        "prep": "heat the coffee, whiskey and sugar; do not boil. pour into glass and top with cream; serve hot."
+    }, 
+    "Cuba libre": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lime wedge", 
+        "type": "cocktail", 
+        "prep": "build all ingredients in a highball glass filled with ice. garnish with lime wedge."
+    }, 
+    "Bramble": {
+        "glass": "old fashioned", 
+        "timing": "all day", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "blackberry, lemon slice", 
+        "type": "mixed drink", 
+        "prep": "fill glass with crushed ice. build gin, lemon juice and simple syrup over. stir, and then pour blackberry liqueur over in a circular fashion to create marbling effect. garnish with two blackberries and lemon slice."
+    }, 
+    "Naked and Famous": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into shaker with ice cubes. shake well. strain into chilled cocktail glass."
+    }, 
+    "Barracuda": {
+        "glass": "margarita", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "shake pour ingredients with ice. strain into glass, top with sparkling wine."
+    }, 
+    "Corpse Reviver #2": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "stir with ice, strain into a chilled cocktail glass."
+    }, 
+    "Lemon drop martini": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": "lemon slice", 
+        "type": "mixed drink", 
+        "prep": "pour all ingredients into cocktail shaker, shake well with ice, strain into chilled cocktail glass. garnish with sugar rim around the glass."
+    }, 
+    "Dark 'n' Stormy": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lime wedge", 
+        "type": "mixed drink", 
+        "prep": "fill glass with ice, add ginger beer and top with rum. garnish with lime wedge."
+    }, 
+    "Fernandito": {
+        "glass": "old fashioned", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": null, 
+        "type": "mixed drink", 
+        "prep": "fill a double old-fashioned glass with ice. pour in the fernet-branca, fill the glass with cola. stir gently."
+    }, 
+    "Porto flip": {
+        "glass": "cocktail", 
+        "timing": "after dinner", 
+        "served": "straight up; without ice", 
+        "garnish": "grated nutmeg", 
+        "type": "cocktail", 
+        "prep": "shake ingredients together in a mixer with ice.  strain into glass, garnish and serve"
+    }, 
+    "Brandy Crusta": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "up", 
+        "garnish": "orange or lemon twist", 
+        "type": "cocktail", 
+        "prep": "mix all ingredients with ice cubes in a mixing glass.  strain into slim cocktail glass rimmed with sugar."
+    }, 
+    "Champagne cocktail": {
+        "glass": "champagne flute", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "orange slice and maraschino cherry", 
+        "type": "cocktail", 
+        "prep": "add dash of angostura bitter onto sugar cube and drop it into champagne flute. add cognac followed by gently pouring chilled champagne. garnish with orange slice and maraschino cherry."
+    }, 
+    "Americano": {
+        "glass": "highball", 
+        "timing": "before dinner", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "half an orange slice, lemon twist", 
+        "type": "mixed drink", 
+        "prep": "pour the campari and vermouth over ice into a highball glass, add a splash of soda water and garnish with half orange slice and a lemon twist."
+    }, 
+    "Vieux Carr\u00e9": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "orange zest and maraschino cherry", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into a mixing glass with ice cubes. stir well. strain into chilled cocktail glass. garnish with orange zest and a maraschino cherry."
+    }, 
+    "Penicillin": {
+        "glass": "old fashioned", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "candied ginger", 
+        "type": "cocktail", 
+        "prep": "muddle fresh ginger in a shaker and add the remaining ingredients, except for the lagavulin whiskey. fill the shaker with ice and shake. double-strain into a chilled old fashioned glass with ice. float the lagavulin whiskey on top."
+    }, 
+    "Tommy's margarita": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight (except at tommy's)", 
+        "garnish": null, 
+        "type": "mixed drink", 
+        "prep": "shake and strain into a chilled cocktail glass."
+    }, 
+    "Mint julep": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "mint sprig", 
+        "type": "cocktail", 
+        "prep": "in a highball glass gently muddle the mint, sugar and water. fill the glass with cracked ice, add bourbon and stir well until the glass is well frosted. garnish with a mint sprig."
+    }, 
+    "Tipperary": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "orange slice", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into mixing glass with ice cubes. stir well. strain into chilled cocktail glass. garnish with a slice of orange."
+    }, 
+    "Ramos fizz": {
+        "glass": null, 
+        "timing": null, 
+        "served": null, 
+        "garnish": null, 
+        "type": "cocktail family", 
+        "prep": null
+    }, 
+    "Old Cuban": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "mint sprigs", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients except the wine into cocktail shaker, shake well with ice, strain into chilled elegant cocktail glass. top up with the sparkling wine and garnish with mint sprigs"
+    }, 
+    "Negroni": {
+        "glass": "old fashioned", 
+        "timing": "before dinner", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "orange slice", 
+        "type": "cocktail", 
+        "prep": "stir into glass over ice, garnish and serve."
+    }, 
+    "Bellini": {
+        "glass": "champagne flute", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "wine cocktail", 
+        "prep": "pour peach pur\u00e9e into chilled glass, add sparkling wine. stir gently."
+    }, 
+    "Between the Sheets": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into shaker with ice cubes, shake, strain into chilled cocktail glass."
+    }, 
+    "Yellow Bird": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into a cocktail shaker, shake well with ice, strain into chilled cocktail glass"
+    }, 
+    "Mimosa": {
+        "glass": "champagne flute", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "orange twist", 
+        "type": "wine cocktail", 
+        "prep": "ensure both ingredients are well chilled, then mix into the glass. serve cold."
+    }, 
+    "Horse's Neck": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "long spiral of lemon zest", 
+        "type": "mixed drink", 
+        "prep": "pour brandy and ginger ale directly into highball glass with ice cubes. stir gently. garnish with lemon zest. if desired, add dashes of angostura bitter."
+    }, 
+    "Southside": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "mint sprig", 
+        "type": "cocktail", 
+        "prep": "shake well with ice and double-strain into a chilled cocktail glass"
+    }, 
+    "Boulevardier": {
+        "glass": "old fashioned", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "orange zest", 
+        "type": "cocktail", 
+        "prep": "stir with ice, strain, garnish and serve."
+    }, 
+    "Alexander": {
+        "glass": "cocktail", 
+        "timing": "after dinner", 
+        "served": "straight up; without ice", 
+        "garnish": "nutmeg", 
+        "type": "cocktail", 
+        "prep": "shake all ingredients with ice and strain contents into a cocktail glass. sprinkle nutmeg on top and serve."
+    }, 
+    "French 75": {
+        "glass": "champagne flute", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "wine cocktail", 
+        "prep": "combine gin, syrup, and lemon juice in a cocktail shaker filled with ice.  shake vigorously and strain into a chilled champagne glass.  top up with champagne. stir gently."
+    }, 
+    "John Collins": {
+        "glass": "collins", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lemon slice and maraschino cherry", 
+        "type": "mixed drink", 
+        "prep": "pour all ingredients directly into highball glass filled with ice. stir gently. garnish. add a dash of angostura bitters."
+    }, 
+    "Casino": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": "lemon twist and maraschino cherry", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into shaker with ice cubes. shake well. strain into chilled cocktail glass. garnish with a lemon twist and a maraschino cherry. serve without a straw."
+    }, 
+    "Bee's Knees": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "optionally garnish with lemon or orange zest", 
+        "type": "cocktail", 
+        "prep": "stir honey syrup with lemon and orange juices until it dissolves, add gin and shake with ice. strain into chilled cocktail glass"
+    }, 
+    "Paper Plane": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into cocktail shaker, shake well with ice, strain into chilled cocktail glass."
+    }, 
+    "Planter's Punch": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "orange zest", 
+        "type": "mixed drink", 
+        "prep": "pour all ingredients into a tumbler glass."
+    }, 
+    "Last Word": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "shake with ice and strain into a cocktail glass."
+    }, 
+    "Martinez": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "up", 
+        "garnish": "lemon zest", 
+        "type": "cocktail", 
+        "prep": "stirred over ice, strained into a chilled glass, garnished, and served up."
+    }, 
+    "Whiskey sour": {
+        "glass": "old fashioned", 
+        "timing": "before dinner", 
+        "served": "on the rocks or straight up", 
+        "garnish": "maraschino cherry and half orange slice", 
+        "type": "cocktail", 
+        "prep": "shake with ice. strain into chilled glass, garnish and serve."
+    }, 
+    "Mojito": {
+        "glass": "collins", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "sprig of mint (yerba buena in the original recipe), slice of lime", 
+        "type": "cocktail", 
+        "prep": "muddle mint leaves with sugar and lime juice. add a splash of soda water and fill the glass with cracked ice. pour the rum and top with soda water. garnish with sprig of mint leaves and lemon slice. serve with straw."
+    }, 
+    "Zombie": {
+        "glass": "zombie", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "mint sprig", 
+        "type": "mixed drink", 
+        "prep": "mix ingredients in a shaker with crushed ice. pour into a tall tumbler glass."
+    }, 
+    "Caipirinha": {
+        "glass": "old fashioned", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "sugarcane, lime(ingredient)", 
+        "type": "cocktail", 
+        "prep": "place lime and sugar into old fashioned glass and muddle (mash the two ingredients together using a muddler or a wooden spoon). fill the glass with ice and add the cacha\u00e7a."
+    }, 
+    "Margarita": {
+        "glass": "margarita", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "salt on the rim (optional)", 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into shaker with ice. shake well and strain into cocktail glass rimmed with salt."
+    }, 
+    "Pi\u00f1a Colada": {
+        "glass": "poco grande", 
+        "timing": null, 
+        "served": "blended with ice (frozen style)", 
+        "garnish": "pineapple slice and/or maraschino cherry", 
+        "type": "mixed drink", 
+        "prep": "blend all the ingredients with ice in an electric blender, pour into a large goblet or hurricane glass and serve."
+    }, 
+    "Monkey Gland": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "shake well over ice cubes in a shaker, strain into a chilled cocktail glass."
+    }, 
+    "Manhattan": {
+        "glass": "cocktail", 
+        "timing": "before dinner", 
+        "served": "straight up; without ice", 
+        "garnish": "maraschino cherry", 
+        "type": "cocktail", 
+        "prep": "stirred over ice, strained into a chilled glass, garnished, and served up."
+    }, 
+    "Cosmopolitan": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": "lime slice", 
+        "type": "cocktail", 
+        "prep": "shake all ingredients in cocktail shaker filled with ice. strain into a large cocktail glass. garnish with lime slice."
+    }, 
+    "Kir": {
+        "glass": "wine", 
+        "timing": "before dinner", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "wine cocktail", 
+        "prep": "add the cr\u00e8me de cassis to the bottom of the glass, then top up with wine."
+    }, 
+    "Golden dream": {
+        "glass": "cocktail", 
+        "timing": "after dinner", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "shake with cracked ice.  strain into glass and serve."
+    }, 
+    "Bloody Mary": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "celery stalk and lemon wedge (optional)", 
+        "type": "mixed drink", 
+        "prep": "stirring gently, pour all ingredients into highball glass. garnish."
+    }, 
+    "New York Sour": {
+        "glass": "rocks", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lemon or orange zest and cherry", 
+        "type": "cocktail", 
+        "prep": "pour the whiskey, syrup, lemon juice, and egg white into shaker with ice cubes. shake vigorously. strain into chilled rocks glass filled with ice. float the wine on top. garnish with lemon or orange zest and cherry."
+    }, 
+    "Spritz": {
+        "glass": "aperol spritz", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "slice of orange", 
+        "type": "wine cocktail", 
+        "prep": "build all ingredients into a wine glass filled with ice. stir gently."
+    }, 
+    "Gin fizz": {
+        "glass": null, 
+        "timing": null, 
+        "served": null, 
+        "garnish": null, 
+        "type": "cocktail family", 
+        "prep": null
+    }, 
+    "Espresso martini": {
+        "glass": "cocktail", 
+        "timing": null, 
+        "served": "straight up; without ice", 
+        "garnish": "3 coffee beans", 
+        "type": "mixed drink", 
+        "prep": "pour ingredients into shaker filled with ice, shake vigorously, and strain into chilled martini glass."
+    }, 
+    "Hemingway Special": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "mixed drink", 
+        "prep": "pour all ingredients into a shaker with ice. shake."
+    }, 
+    "Sea Breeze": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "lime slice", 
+        "type": "mixed drink", 
+        "prep": "build all ingredients in a highball glass filled with ice. garnish with lime wedge."
+    }, 
+    "French martini": {
+        "glass": "cocktail", 
+        "timing": "before dinner", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into shaker with ice cubes. shake well and strain into a chilled cocktail glass. squeeze oil from lemon peel onto the drink."
+    }, 
+    "French Connection": {
+        "glass": "old fashioned", 
+        "timing": "after dinner", 
+        "served": "on the rocks; poured over ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients directly into old fashioned glass filled with ice cubes. stir gently."
+    }, 
+    "Russian Spring Punch": {
+        "glass": "highball", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into cocktail shaker except the sparkling wine, shake well with ice, strain into chilled tall tumbler glass filled with ice and top up with sparkling wine."
+    }, 
+    "Angel Face": {
+        "glass": "cocktail", 
+        "timing": "all day", 
+        "served": "straight up; without ice", 
+        "garnish": null, 
+        "type": "cocktail", 
+        "prep": "pour all ingredients into cocktail shaker filled with ice cubes. shake and strain into a chilled cocktail glass."
+    }, 
+    "Vesper": {
+        "glass": "cocktail", 
+        "timing": "before dinner", 
+        "served": "straight up; without ice", 
+        "garnish": "lemon twist", 
+        "type": "cocktail", 
+        "prep": "shake and strain into a chilled cocktail glass. add the garnish."
+    }, 
+    "Suffering Bastard": {
+        "glass": "collins", 
+        "timing": null, 
+        "served": "on the rocks; poured over ice", 
+        "garnish": "mint sprig & optional orange slice", 
+        "type": "mixed drink", 
+        "prep": "shake everything but ginger beer with ice, pour unstrained into glass, top with ginger beer."
+    }
+}

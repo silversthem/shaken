@@ -10,7 +10,7 @@ import {TagList} from '/js/components/searchbar/TagList.mjs'
 import {ResultsDisplay} from '/js/components/mainside/ResultsDisplay.mjs'
 import {FocusedResult} from '/js/components/mainside/FocusedResult.mjs'
 import {Catalog} from '/js/components/mainside/Catalog.mjs'
-// importing data
+// importing data controller
 import {AppDataController} from '/js/AppDataController.mjs'
 
 // html dom elements of the app
@@ -27,6 +27,7 @@ const catalog_list = document.getElementById('catalog')
 export class App {
     // Assembles and runs the app
     constructor() {
+		// set of currently searched tags
         this.tagList = new Set()
 		// creating router
         this.router = new Router()
@@ -53,7 +54,6 @@ export class App {
 	}
 	// Mounts app by mounting all the components, called when all initial data is loaded
 	mount() {
-		console.log('mounting...')
 		this.searchbar        = this.mountComponent(SearchBar, {'input': searchbar_input, 'autocompleteDiv': autocomplete_list}) 
 		this.tagListDiv       = this.mountComponent(TagList, {'tagsDiv': selected_ingredients_list})
 		this.resultsDiv       = this.mountComponent(ResultsDisplay, {'resultsDiv': results_list})
@@ -121,7 +121,6 @@ export class App {
     }
     // Starts the app
     serve() {
-		console.log('serving...')
 		/* appending routes */
 
         // Searching route gets the searched tags through the query parameter and shows results
@@ -150,7 +149,7 @@ export class App {
         this.router.setRoute('', (params) => {
 			// hiding cocktail in view
 			this.focusedResultDiv.close()
-			// updating with an empty query -> displays catalog
+			// updating with an empty query -> displays catalog (same as having an empty query)
 			this.updateSearchFromQueryParameter('')
         })
 

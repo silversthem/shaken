@@ -49,26 +49,75 @@ export class FocusedResult extends Component {
 		ingStr += ingredient.ingredient
 		return ingStr
 	}
+	// returns right glass icon
+	getGlassIcon(glassType) {
+		let src = '/css/assets/icons/'
+		let types = {
+			'poco grande': src + 'poco_grande.svg',
+			'copper mug': src + 'mug.svg',
+			'cocktail': src + 'cocktail.svg',
+			'aperol spritz': src + 'spritz.svg',
+			'champagne flute': src + 'flute.svg',
+			'hurricane': src + 'hurricane.svg',
+			'rocks': src + 'old_fashioned.svg',
+			'zombie': src + 'collins.svg',
+			'highball': src + 'highball.svg',
+			'tumbler': src + 'tumbler.svg',
+			'collins': src + 'collins.svg',
+			'old fashioned': src + 'old_fashioned.svg',
+			'wine': src + 'wine.svg',
+			'irish coffee mug': src + 'hot_mug.svg',
+			'margarita': src + 'margarita.svg'
+		}
+		let icon = document.createElement('img')
+		icon.classList.add('glass-icon')
+		if(glassType in types) {
+			icon.src = types[glassType]
+			icon.alt = glassType
+		} else {
+			// @TODO:
+		}
+		return icon
+	}
 	// Create a focused div
 	createFocusedDiv() {
+		// data
 		let cocktail = this.dataController.cocktails[this.cocktailName]
-		let div = document.createElement('div')
+		let details = this.dataController.cocktailsDetails[this.cocktailName]
+		// assembling title
 		let titleDiv = document.createElement('h1')
+		titleDiv.innerText = this.cocktailName
+		// assembling icon & garnish
+		let glassIcon = this.getGlassIcon(details['glass'])
+		let garnishDiv = document.createElement('div')
+		garnishDiv.innerHTML = 'Garnish : ' + details['garnish']
+		// assembling cocktail preparation div
+		let prepTitle = document.createElement('h3')
+		prepTitle.innerText = 'Preparation'
+		let prepDiv = document.createElement('div')
+		prepDiv.innerText = details['prep']
+		// assembling ingredient list
 		let ingredientsTitle = document.createElement('h3')
 		ingredientsTitle.innerText = 'Ingredients'
-		let unfocus = document.createElement('div')
-		unfocus.classList.add('unfocus-button')
-		unfocus.addEventListener('click', () => this.eventsCaller.unfocusResult())
-		titleDiv.innerText = this.cocktailName
 		let ingList = document.createElement('ul')
 		for (const ingredient of cocktail) {
 			let ingLi = document.createElement('li')
 			ingLi.innerText = this.parseIngredient(ingredient)
 			ingList.appendChild(ingLi)
 		}
+		// assembling unfocus button
+		let unfocus = document.createElement('div')
+		unfocus.classList.add('unfocus-button')
+		unfocus.addEventListener('click', () => this.eventsCaller.unfocusResult())
+		// assembling div
+		let div = document.createElement('div')
 		div.appendChild(titleDiv)
+		div.appendChild(glassIcon)
+		details['garnish'] && div.appendChild(garnishDiv)
 		div.appendChild(ingredientsTitle)
 		div.appendChild(ingList)
+		div.appendChild(prepTitle)
+		div.appendChild(prepDiv)
 		div.appendChild(unfocus)
 		return div
 	}
@@ -128,6 +177,7 @@ export class FocusedResult extends Component {
 				this.changeHeight(nextHeight)
 				clearInterval(this.openInterval)
 				this.openInterval = false
+				return
 			}
 			counter += iterator
 			this.changeHeight(counter)
@@ -149,9 +199,10 @@ export class FocusedResult extends Component {
 		const fakeDiv = document.createElement('div')
 		fakeDiv.style.visibility = 'hidden'
 		fakeDiv.style.position = 'absolute'
-		fakeDiv.style.paddingBottom = '20px'
+		// fakeDiv.style.paddingBottom = '20px'
 		fakeDiv.appendChild(div)
 		document.body.appendChild(fakeDiv)
+		div.style.paddingBottom = '32px' // adding space for the closing button
 		const nextHeight = fakeDiv.offsetHeight
 		document.body.removeChild(fakeDiv)
 		// showing the result div and starting the transition between the heights
