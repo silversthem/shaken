@@ -9,9 +9,9 @@ export class AppDataController extends DataController {
 	// loads all app data on class construction
 	constructor(events) {
 		super({
-			"cocktails":"/data/cocktails.json",
-			"tags":"/data/tags.json",
-			"cocktailsDetails": "/data/cocktails_details.json"}, events)
+			"cocktails":"./data/cocktails.json",
+			"tags":"./data/tags.json",
+			"cocktailsDetails": "./data/cocktails_details.json"}, events)
 	}
 
 	/* Data Manipulation */
